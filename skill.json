@@ -1,0 +1,42 @@
+{
+  "$schema_version": 1,
+  "name": "srs-ag10-functional-spec",
+  "version": "1.0.0",
+  "node_id": "AG-10",
+  "kind": "agent",
+  "summary": "Agent Node AG-10 (Pha B SOP): đặc tả Use Case theo Use-Case 3.0, hai mức fidelity (brief trong vòng lặp → detailed khi hội tụ); làm chủ ngữ nghĩa field; luồng, Special Requirements, Use-Case Slice, phân quyền hai chiều, Gherkin; nguồn cho TL-03/TL-12/TL-05.",
+  "repository": "https://github.com/HaNguyen1409/srs-ag10-functional-spec",
+  "license": "MIT",
+  "interface": {
+    "contract": "SKILL.md — đầu vào/đầu ra là tài liệu Markdown/JSON mô tả trong skill; không gọi trực tiếp skill khác",
+    "output_artifact": null,
+    "sop_steps": [
+      {
+        "step": "10",
+        "title": "Đặc tả UC (fidelity brief→detailed, screen-agnostic vòng đầu; làm chủ ngữ nghĩa field)",
+        "type": "Agent",
+        "receives_from": "B9; vòng ≥ 2: B17",
+        "sends_to": "B11, B14, (B-GHERKIN/B-PERM)"
+      },
+      {
+        "step": "18",
+        "title": "HỘI TỤ: chốt UC 3.0 đầy đủ + ERD logical chốt + đối chiếu UC ↔ ERD ↔ prototype đã duyệt",
+        "type": "Human Gate",
+        "receives_from": "B17, B10, B11, B12",
+        "sends_to": "B19, B20"
+      }
+    ]
+  },
+  "upstream": {
+    "srs-ag06-business-model": "^1.4.2",
+    "srs-ag09-demo-feedback-triage": "^1.0.0",
+    "srs-ag14-data-design": "^1.0.0",
+    "srs-ag07-screen-flow-design": "^1.0.0"
+  },
+  "downstream": [
+    "srs-ag14-data-design",
+    "srs-ag11-nfr-spec"
+  ],
+  "orchestrates": {},
+  "runtime": null
+}
