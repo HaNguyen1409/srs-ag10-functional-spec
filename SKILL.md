@@ -35,7 +35,7 @@ Mục tiêu: với mỗi use case trong baseline, viết đặc tả đủ để
 - **TL-05** — ma trận phân quyền hai chiều: **UC × vai trò** (`permissions`) và **thực thể × CRUD** (`data_permissions`).
 
 Nguyên tắc nền:
-0. **Đặc tả hệ thống mục tiêu.** Dự án đã có phần mềm: hiện trạng chỉ ở B5a; đặc tả theo UC của mô hình mục tiêu (B9). Khi nguồn chưa thống nhất, chọn theo thứ tự **D/REQ → giả định TL-01 (GD) → hiện trạng**; bước khác hiện trạng mà chưa có nguồn ghi `(GĐ)` hoặc `[CẦN XÁC NHẬN] (GAP-xx)`. Vòng 1 bắt buộc đặc tả UC cốt lõi, UC mới và UC sửa; UC phụ không đổi so với phần mềm hiện có được để sau, RTM ghi «chưa đặc tả».
+0. **Đặc tả hệ thống mục tiêu.** Dự án đã có phần mềm: hiện trạng chỉ ở B5a; đặc tả theo UC của mô hình mục tiêu (B9). Khi nguồn chưa thống nhất, chọn theo thứ tự **D/REQ → giả định TL-01 (GD) → hiện trạng**; bước khác hiện trạng mà chưa có nguồn ghi `(suy luận)` (không dùng «(GĐ)», trùng tiền tố GD-xx) hoặc `[CẦN XÁC NHẬN] (GAP-xx)`. Vòng 1 bắt buộc đặc tả UC cốt lõi, UC mới và UC sửa; UC phụ không đổi so với phần mềm hiện có được để sau, RTM ghi «chưa đặc tả».
 1. **SRS là nguồn chính về logic, prototype là nguồn chính về bố cục** (quy ước SOP). Không mô tả lại bố cục đã có trong prototype. Chỉ tham chiếu SCR-ID và tên phần tử, rồi mô tả logic mà prototype không thể hiện được: điều kiện, quy tắc, trạng thái, xử lý lỗi, quyền.
 2. Ưu tiên bảng và danh sách đánh số, không viết văn xuôi. Quy tắc dùng chung chỉ viết một lần (BR-xxx, VR-xxx) rồi tham chiếu lại.
 3. Không bịa quy tắc nghiệp vụ hay con số. Thiếu thì ghi `[CẦN XÁC NHẬN]`.
@@ -341,12 +341,12 @@ TL-03 sở hữu: quy tắc nghiệp vụ BR, quy tắc kiểm tra dữ liệu V
 ## 0. Tóm tắt | Chỉ số | Giá trị |   (số đặc tả / UC; UC cốt lõi, mới, sửa chưa đặc tả; số BR, VR; điểm chờ xác nhận; trạng thái Gate — không in độ phủ REQ)
 ## 1. Phạm vi tài liệu
 | Cần biết | Xem ở |   (CHỈ bảng này: tác nhân, UC mới/sửa, vòng đời, MD → B9; câu REQ, GAP → Pha A; chức năng hiện có, chức năng × vai trò → B5a; bảng, cột → TL-07; màn hình của UC, REQ của từng BR và độ phủ REQ loại BR → RTM (D06_UC, D10_BR, D04_REQ «Số BR»); NFR-TMP → B19)
-## 2. Quy ước | Khái niệm | Quy ước |   (mức đặc tả, mã ngoại lệ X-…, BR/VR + REQ dùng trực tiếp làm quy tắc (`req_as_rule`), căn cứ khác của BR, (GĐ), [CẦN XÁC NHẬN] (GAP-xx))
+## 2. Quy ước | Khái niệm | Quy ước |   (mức đặc tả, mã ngoại lệ X-…, BR/VR + REQ dùng trực tiếp làm quy tắc (`req_as_rule`), căn cứ khác của BR, (suy luận), [CẦN XÁC NHẬN] (GAP-xx); mỗi dòng giải nghĩa một ký hiệu hoặc tiền tố mã)
 ## 3. Quy tắc nghiệp vụ dùng chung | BR | Quy tắc | Căn cứ khác | Vấn đề mở |   (+ câu «Mã đã loại: …» nếu có; Vấn đề mở gồm GAP và CF)
 ## 4. Quy tắc kiểm tra dữ liệu | VR | Quy tắc | Thông báo lỗi | REQ / căn cứ |
 ## 5. Ngữ nghĩa trường | Trường | Kiểu khái niệm | Bắt buộc | Quy tắc / ghi chú |   (theo thực thể, từ `field_semantics`; cấu trúc bảng ở TL-07) + mỗi `reference_lists` một bảng con
 ## 6. Đặc tả use case   (mỗi đặc tả: Mục tiêu, Tiền điều kiện, Luồng chính, Luồng thay thế, Ngoại lệ, Hậu điều kiện, Quy tắc (mã BR/VR), Chờ xác nhận (mã GAP))
-## 7. Phạm vi đặc tả vòng 1   (chỉ câu: UC chưa đặc tả và lý do; trạng thái đặc tả, mức sẵn sàng ở RTM D06_UC, 02_RTM; REVISION: finding_resolution)
+## 7. Phạm vi đặc tả của phiên bản này   (chỉ câu: UC chưa đặc tả và lý do; trạng thái đặc tả, mức sẵn sàng ở RTM D06_UC, 02_RTM; REVISION: finding_resolution)
 ```
 
 **Phương án C — tài liệu giữ nội dung, RTM giữ mã, nhãn, phân loại và liên kết (20/11/2026).** Sheet D của RTM TL-04 chỉ có mã, nhãn (tên hoặc câu phát biểu), phân loại dùng để tính và các liên kết; định nghĩa, mô tả, thuộc tính chỉ ở tài liệu này. Bảng của tài liệu không có cột liên kết hay phân loại đã ở RTM, không có dòng độ phủ hay mức sẵn sàng; mã + tên được lặp làm nhãn tham chiếu. Liên kết vẫn khai báo ở JSON đầu ra để Code Node đổ vào RTM (H29). B-CHECK báo lỗi khi vi phạm. Ở TL-03: đặc tả không in dòng «Tác nhân» — tác nhân thực hiện / duyệt của UC vẫn khai ở `uc_specs[].actors` (JSON) và Code Node đổ vào RTM D06_UC, D12_QUYEN; không lập bảng tổng hợp chép lại «Chờ xác nhận» của từng đặc tả hay mức sẵn sàng.
@@ -354,6 +354,16 @@ TL-03 sở hữu: quy tắc nghiệp vụ BR, quy tắc kiểm tra dữ liệu V
 **TL-03 chỉ giữ định nghĩa (MECE với RTM).** RTM D10_BR là bản sao sinh từ `business_rules`, không phải nơi sở hữu thứ hai. Liên kết BR ↔ REQ (`req_ids`) và độ phủ «REQ loại BR có quy tắc» thuộc RTM (D10_BR, D04_REQ «Số BR»); TL-03 giữ «Căn cứ khác» và «Vấn đề mở» vì RTM không có cho BR. Bảng VR giữ cột «REQ / căn cứ» vì RTM không có sheet VR. B-CHECK báo lỗi khi bảng BR của TL-03 có cột REQ hoặc tài liệu có dòng độ phủ REQ loại BR.
 
 Mọi BR/VR dùng trong luồng phải có trong «Quy tắc» của đặc tả đó. Không đưa vào TL-03: danh sách UC đầy đủ hay bảng thay đổi UC (B9), bảng UC ↔ màn hình (RTM), bảng/cột (TL-07), NFR (B19), mục câu hỏi (câu hỏi mới → `new_gaps` → GAP Pha A).
+
+### Quy tắc viết cho người đọc (TL-02 hướng dẫn §7)
+
+Phần Markdown được nhúng nguyên văn thành một chương của SRS, nên viết đúng ngay ở đây; SRS không sửa lại. Quy tắc áp dụng cho phần thân (bảng thông tin đầu tài liệu và lịch sử phiên bản bị bỏ khi nhúng). Đủ tám quy tắc V1–V8 và danh sách cụm cần tìm trước khi xuất: `07-Chuan-tai-lieu/templates/TL-02_huong-dan-lap-rap-SRS.md` §7. Năm điểm hay sai:
+
+- **Người đọc:** 11 nhóm, từ khách hàng, chủ nghiệp vụ tới lập trình viên, kiểm thử, người dùng cuối (danh sách ở mẫu TL-02 §1.2). Viết tiếng Việt thông dụng («Tóm lược», «Cho trước – Khi – Thì»); tên kỹ thuật chỉ giữ khi người lập trình, kiểm thử cần đúng tên đó (tên bảng, cột, cờ cookie). Mỗi bước có tác nhân, hành động, phản hồi của hệ thống; mỗi ngoại lệ có điều kiện và thông báo.
+- **Câu dẫn** nói bảng hoặc mục dưới là gì và đọc thế nào, không nói quy trình nội bộ của bên lập: không «nơi duy nhất», «không chép lại», «vòng 1», «brief», «baseline», «hội tụ», số bước Bxx, mã AG-xx. Ghi chú sở hữu, MECE trong khung đầu ra ở trên là hướng dẫn cho Agent, không in ra. Trỏ sang tài liệu khác chỉ ghi mã tài liệu và số mục (vd «RTM <mã tài liệu> (sheet D06_UC)»).
+- **Viết tắt và tiền tố mã:** mọi chữ viết tắt, tiền tố mã, ký hiệu trong tài liệu (BR, VR, X-…, D, CF, GD, SRC…) phải có trong `glossary` / `id_legend` của project.json (SRS §1.4) hoặc ở §2 Quy ước. Dùng cái mới thì bổ sung vào `glossary` / `id_legend` cùng lúc.
+- **Trạng thái** in ra dạng nhãn thường trong bảng đọc, không in mã HOA_GẠCH_DƯỚI; mã giữ trong JSON.
+- **Một ký hiệu một nghĩa, một khái niệm một tên:** bước chưa có nguồn ghi «(suy luận)», không «(GĐ)» (trùng GD-xx giả định); tác nhân, vai trò ghi đúng tên trên phần mềm ở mọi đặc tả.
 
 ## [HUMAN-IN-THE-LOOP GATE]
 

@@ -15,7 +15,7 @@ Skill là một dịch vụ độc lập, ghép lỏng: nhận đầu vào và t
 | 10 | Đặc tả UC (fidelity brief→detailed, screen-agnostic vòng đầu; làm chủ ngữ nghĩa field) | Agent | B9; vòng ≥ 2: B17 | B11, B14, (B-GHERKIN/B-PERM) |
 | 18 | HỘI TỤ: chốt UC 3.0 đầy đủ + ERD logical chốt + đối chiếu UC ↔ ERD ↔ prototype đã duyệt | Human Gate | B17, B10, B11, B12 | B19, B20 |
 
-**Skill phía trước (cấp đầu vào):** [`srs-ag06-business-model`](https://github.com/HaNguyen1409/srs-ag06-business-model) `^1.4.2` · [`srs-ag09-demo-feedback-triage`](https://github.com/HaNguyen1409/srs-ag09-demo-feedback-triage) `^1.0.0` · [`srs-ag14-data-design`](https://github.com/HaNguyen1409/srs-ag14-data-design) `^1.0.0` · [`srs-ag07-screen-flow-design`](https://github.com/HaNguyen1409/srs-ag07-screen-flow-design) `^1.0.0`
+**Skill phía trước (cấp đầu vào):** [`srs-ag06-business-model`](https://github.com/HaNguyen1409/srs-ag06-business-model) `^1.5.0` · [`srs-ag09-demo-feedback-triage`](https://github.com/HaNguyen1409/srs-ag09-demo-feedback-triage) `^1.0.0` · [`srs-ag14-data-design`](https://github.com/HaNguyen1409/srs-ag14-data-design) `^1.0.0` · [`srs-ag07-screen-flow-design`](https://github.com/HaNguyen1409/srs-ag07-screen-flow-design) `^1.0.0`
 
 **Skill phía sau (dùng đầu ra):** [`srs-ag14-data-design`](https://github.com/HaNguyen1409/srs-ag14-data-design) `^1.0.0` · [`srs-ag11-nfr-spec`](https://github.com/HaNguyen1409/srs-ag11-nfr-spec) `^1.0.0`
 
